@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#c94c0c">
-	<title><%= title %> | ไก่กรอบ</title>
+	<title><%= title %> | กุ๊กไก่</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	<style>
 		:root { --brand: #e85d04; --brand-dark: #c94c0c; --brand-light: #fff1df; }
@@ -42,15 +42,14 @@
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark">
 			<div class="container">
-				<a class="navbar-brand fs-4" href="/">ไก่<span class="text-warning">กรอบ</span></a>
+				<a class="navbar-brand fs-4" href="/">กุ๊ก<span class="text-warning">ไก่</span></a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="เปิดเมนู"><span class="navbar-toggler-icon"></span></button>
 				<div class="collapse navbar-collapse" id="siteNav">
 					<ul class="navbar-nav mx-auto my-2 my-lg-0 gap-lg-3">
 						<li class="nav-item"><a class="nav-link <%= activePage === 'home' ? 'active' : '' %>" href="/" <%= activePage === 'home' ? 'aria-current="page"' : '' %>>หน้าแรก</a></li>
-						<li class="nav-item"><a class="nav-link" href="/#categories">เมนูอาหาร</a></li>
-						<li class="nav-item"><a class="nav-link <%= activePage === 'product' ? 'active' : '' %>" href="/product" <%= activePage === 'product' ? 'aria-current="page"' : '' %>>สินค้า</a></li>
+						<li class="nav-item"><a class="nav-link <%= activePage === 'product' ? 'active' : '' %>" href="/product" <%= activePage === 'product' ? 'aria-current="page"' : '' %>>สินค้าทั้งหมด</a></li>
 						<li class="nav-item"><a class="nav-link <%= activePage === 'about' ? 'active' : '' %>" href="/about" <%= activePage === 'about' ? 'aria-current="page"' : '' %>>เกี่ยวกับเรา</a></li>
-						<li class="nav-item"><a class="nav-link" href="/about#contact">ติดต่อเรา</a></li>
+						
 					</ul>
 					<a class="btn btn-warning fw-semibold rounded-pill px-4" href="/product">สั่งความอร่อย →</a>
 				</div>
@@ -63,12 +62,12 @@
 	<footer class="footer text-white pt-5 pb-3">
 		<div class="container">
 			<div class="row g-4 pb-4">
-				<div class="col-md-5"><a class="navbar-brand fs-4 text-white text-decoration-none" href="/">ไก่<span class="text-warning">กรอบ</span></a><p class="text-white-50 mt-3">ไก่ทอดกรอบและเฟรนช์ฟรายส์ทอดใหม่ อร่อยได้ทุกวัน</p></div>
+				<div class="col-md-5"><a class="navbar-brand fs-4 text-white text-decoration-none" href="/">กุ๊ก<span class="text-warning">ไก่</span></a><p class="text-white-50 mt-3">ไก่ทอดกรอบและเฟรนช์ฟรายส์ทอดใหม่ อร่อยได้ทุกวัน</p></div>
 				<div class="col-6 col-md-3"><h2 class="h6 fw-bold">เมนู</h2><ul class="list-unstyled d-grid gap-2 small"><li><a href="/">หน้าแรก</a></li><li><a href="/#categories">เมนูอาหาร</a></li><li><a href="/product">สินค้า</a></li><li><a href="/about">เกี่ยวกับร้าน</a></li></ul></div>
 				<div class="col-6 col-md-4"><h2 class="h6 fw-bold">ติดต่อเรา</h2><p class="small text-white-50 mb-1">อีเมล: hello@crispy.example</p><p class="small text-white-50 mb-0">โทร: 02-123-4567</p></div>
 			</div>
 			<hr class="border-light opacity-25">
-			<p class="small text-white-50 text-center mb-0">© 2025 ไก่กรอบ. สงวนลิขสิทธิ์</p>
+			<p class="small text-white-50 text-center mb-0">© 2025 กุ๊กไก่. สงวนลิขสิทธิ์</p>
 		</div>
 	</footer>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

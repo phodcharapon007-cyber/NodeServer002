@@ -8,6 +8,10 @@ app.use(expressLayouts);
 app.set('view engine', 'ejs');
 app.set('layout', 'layout');
 
+app.get('/', (req, res) => {
+    res.render('index', { title: 'หน้าแรก', activePage: 'home', products });
+});
+
 const products = [
     { id: 'chicken-small', name: 'ไก่ทอดกรอบชุดเล็ก', description: 'ไก่ทอดร้อน ๆ กรอบนอกฉ่ำใน', price: 89, image: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=85' },
     { id: 'fries', name: 'เฟรนช์ฟรายส์', description: 'ทอดใหม่ กรอบนอกนุ่มใน', price: 49, image: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=800&q=85' },
@@ -30,10 +34,6 @@ const products = [
     { id: 'bbq-dip', name: 'ซอสบาร์บีคิว', description: 'ซอสหอมหวานเข้มข้น', price: 15, image: 'https://images.unsplash.com/photo-1540914124281-342587941389?auto=format&fit=crop&w=800&q=85' },
     { id: 'family-set', name: 'ชุดครอบครัว', description: 'ไก่ทอด เฟรนช์ฟรายส์ และดิป', price: 299, image: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=85' },
 ];
-
-app.get('/', (req, res) => {
-    res.render('index', { title: 'หน้าแรก', activePage: 'home', products });
-});
 
 const showProducts = (req, res) => {
     const itemsPerPage = 5;
