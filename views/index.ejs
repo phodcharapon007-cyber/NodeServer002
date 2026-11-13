@@ -1,0 +1,51 @@
+<section class="hero py-5" id="home">
+	<div class="container py-lg-4">
+		<div class="row align-items-center g-4">
+			<div class="col-lg-6">
+				<p class="eyebrow text-uppercase mb-3">กรอบนอก ฉ่ำใน ทำสดใหม่ทุกวัน</p>
+				<h1 class="display-4 fw-bold lh-sm mb-3">ไก่ทอดร้อน ๆ<br><span class="text-warning">คู่เฟรนช์ฟรายส์</span></h1>
+				<p class="lead text-secondary mb-4">อร่อยเต็มคำกับไก่ทอดกรอบหอม เสิร์ฟพร้อมเฟรนช์ฟรายส์ทอดใหม่ กินเพลินได้ทุกมื้อ</p>
+				<a class="btn btn-brand btn-lg rounded-pill px-4 me-2 mb-2" href="/product">ดูเมนูเลย</a>
+				<a class="btn btn-outline-success btn-lg rounded-pill px-4 mb-2" href="#categories">เลือกความอร่อย</a>
+				<div class="small text-secondary mt-3">✓ ทอดใหม่ทุกออเดอร์ &nbsp; ✓ กรอบอร่อยเต็มคำ &nbsp; ✓ พร้อมเสิร์ฟความสุข</div>
+			</div>
+			<div class="col-lg-6"><img class="hero-image" src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="ไก่ทอดกรอบสีทองพร้อมเสิร์ฟ"></div>
+		</div>
+	</div>
+</section>
+
+<section class="py-5" id="categories">
+	<div class="container py-2">
+		<div class="text-center mb-4 mb-lg-5"><p class="eyebrow mb-2">อร่อยได้ตามใจ</p><h2 class="fw-bold">เลือกเมนูโปรด</h2></div>
+		<div class="row g-3 g-lg-4">
+			<div class="col-6 col-lg-3"><a class="category-card h-100 rounded-4 p-3 p-lg-4 d-flex flex-column text-decoration-none text-dark" href="/product"><span class="category-icon mb-3" aria-hidden="true">🍗</span><h3 class="h6 fw-bold mb-1">ไก่ทอด</h3><span class="small text-secondary">กรอบนอก ฉ่ำใน</span></a></div>
+			<div class="col-6 col-lg-3"><a class="category-card h-100 rounded-4 p-3 p-lg-4 d-flex flex-column text-decoration-none text-dark" href="/product"><span class="category-icon mb-3" aria-hidden="true">🍟</span><h3 class="h6 fw-bold mb-1">เฟรนช์ฟรายส์</h3><span class="small text-secondary">ทอดร้อน กรอบอร่อย</span></a></div>
+			<div class="col-6 col-lg-3"><a class="category-card h-100 rounded-4 p-3 p-lg-4 d-flex flex-column text-decoration-none text-dark" href="/product"><span class="category-icon mb-3" aria-hidden="true">🌶️</span><h3 class="h6 fw-bold mb-1">ซอสและดิป</h3><span class="small text-secondary">เพิ่มรสชาติได้ตามชอบ</span></a></div>
+			<div class="col-6 col-lg-3"><a class="category-card h-100 rounded-4 p-3 p-lg-4 d-flex flex-column text-decoration-none text-dark" href="/product"><span class="category-icon mb-3" aria-hidden="true">🍗</span><h3 class="h6 fw-bold mb-1">ชุดอิ่มคุ้ม</h3><span class="small text-secondary">อร่อยครบในชุดเดียว</span></a></div>
+		</div>
+	</div>
+</section>
+
+<section class="py-5" id="products" style="background:#fff3e7">
+	<div class="container py-2">
+		<div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4"><div><p class="eyebrow mb-2">เมนูขายดี</p><h2 class="fw-bold mb-0">อร่อยแนะนำ</h2></div><a class="link-success fw-semibold text-decoration-none" href="/product">ดูเมนูทั้งหมด →</a></div>
+		<div class="row g-3 g-lg-4">
+			<% products.slice(0, 4).forEach((product) => { %>
+				<div class="col-6 col-lg-3">
+					<div class="card product-card h-100 rounded-4 overflow-hidden">
+						<img src="<%= product.image %>" class="card-img-top" alt="<%= product.name %>">
+						<div class="card-body d-flex flex-column">
+							<h3 class="h6 fw-bold"><%= product.name %></h3>
+							<p class="small text-secondary"><%= product.description %></p>
+							<div class="mt-auto d-flex justify-content-between align-items-center"><span class="price">฿<%= product.price %></span><a class="btn btn-sm btn-outline-success rounded-pill" href="/product/<%= product.id %>">ดูเมนู</a></div>
+						</div>
+					</div>
+				</div>
+			<% }); %>
+		</div>
+	</div>
+</section>
+
+<section class="py-5 newsletter">
+	<div class="container text-center py-2"><p class="eyebrow mb-2">ของอร่อยพร้อมเสิร์ฟ</p><h2 class="fw-bold">หิวเมื่อไหร่ แวะมาหาเรา</h2><p class="text-secondary mb-4">ไก่ทอดและเฟรนช์ฟรายส์ร้อน ๆ รอคุณอยู่</p><a class="btn btn-brand btn-lg rounded-pill px-4" href="/product">เลือกเมนูและสั่งเลย</a></div>
+</section>

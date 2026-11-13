@@ -1,0 +1,46 @@
+<% if (selectedProduct) { %>
+	<section class="py-5">
+		<div class="container py-lg-4">
+			<a class="link-success fw-semibold text-decoration-none" href="/product">← กลับไปเมนูทั้งหมด</a>
+			<div class="row align-items-center g-4 mt-2">
+				<div class="col-lg-6"><img class="hero-image" src="<%= selectedProduct.image %>" alt="<%= selectedProduct.name %>"></div>
+				<div class="col-lg-6">
+					<p class="eyebrow">เมนูไก่กรอบ</p>
+					<h1 class="display-5 fw-bold"><%= selectedProduct.name %></h1>
+					<p class="lead text-secondary"><%= selectedProduct.description %></p>
+					<p class="price fs-3">฿<%= selectedProduct.price %></p>
+					<a class="btn btn-brand btn-lg rounded-pill px-4" href="/product">เลือกเมนูอื่น</a>
+				</div>
+			</div>
+		</div>
+	</section>
+<% } else { %>
+	<section class="hero py-5">
+		<div class="container py-lg-4">
+			<p class="eyebrow text-uppercase mb-3">ทอดใหม่ พร้อมเสิร์ฟ</p>
+			<h1 class="display-4 fw-bold">เมนูไก่ทอดและเฟรนช์ฟรายส์</h1>
+			<p class="lead text-secondary mt-3 mb-0">เลือกความอร่อยที่ใช่สำหรับคุณ</p>
+		</div>
+	</section>
+	<section class="py-5">
+		<div class="container">
+			<div class="row g-3 g-lg-4">
+				<% products.forEach((product) => { %>
+					<div class="col-6 col-lg-3">
+						<div class="card product-card h-100 rounded-4 overflow-hidden">
+							<img src="<%= product.image %>" class="card-img-top" alt="<%= product.name %>">
+							<div class="card-body d-flex flex-column">
+								<h2 class="h5 fw-bold"><%= product.name %></h2>
+								<p class="small text-secondary"><%= product.description %></p>
+								<div class="mt-auto d-flex justify-content-between align-items-center gap-2">
+									<span class="price">฿<%= product.price %></span>
+									<a class="btn btn-sm btn-outline-success rounded-pill" href="/product/<%= product.id %>">รายละเอียด</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				<% }); %>
+			</div>
+		</div>
+	</section>
+<% } %>
